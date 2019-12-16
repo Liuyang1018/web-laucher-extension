@@ -1,0 +1,19 @@
+{
+  "name": "Web Launcher",
+  "version": "0.1",
+  "description": "Assistive Page Launcher",
+  "manifest_version": 2,
+  "browser_action": {},
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "permissions": ["activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "web_accessible_resources": ["launcher.html"]
+}
