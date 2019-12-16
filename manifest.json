@@ -8,6 +8,15 @@
     "scripts": ["background.js"],
     "persistent": false
   },
+  "commands": {
+    "_execute_browser_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+F",
+        "mac": "MacCtrl+Shift+F"
+      },
+      "description": "Opens launcher.html"
+    }
+  },
   "permissions": ["activeTab"],
   "content_scripts": [
     {
