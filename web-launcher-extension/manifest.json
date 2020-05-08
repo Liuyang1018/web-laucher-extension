@@ -1,0 +1,36 @@
+{
+  "name": "Web-launcher",
+  "version": "1.0",
+  "manifest_version": 2,
+  "browser_action": {
+  },
+  "background": {
+    "scripts": ["background.js"],
+    
+    "persistent": false
+  },
+  "icons":{
+    "16":"icon.png",
+    "48":"icon.png",
+    "128":"icon.png",
+    "256":"icon.png"
+  },
+  "commands": {
+    "_execute_browser_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+F",
+        "mac": "MacCtrl+Shift+F"
+      },
+      "description": "Opens launcher.html"
+    }
+  },
+  "permissions": ["tabs","activeTab", "storage"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "options_page": "settings.html",
+  "web_accessible_resources": ["keyboard.html","keyboard.js","relativ.html","relativ.js","launcher.html","launcher1.html","launcher.js","launcher1.js"]
+}
